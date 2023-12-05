@@ -9,10 +9,6 @@ import javafx.event.ActionEvent;
 
 public class PrimaryController {
 
-    @FXML
-    private void switchToSecondary() throws IOException {
-        //App.setRoot("secondary");
-    }
 
     @FXML
     private TextField usernameTextField;
@@ -25,6 +21,8 @@ public class PrimaryController {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
 
+
+        //Need to input logic from backend here
         if(!username.isEmpty() && !password.isEmpty()){
             SceneManager.getInstance().showHomepage();
         }
