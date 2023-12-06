@@ -1,0 +1,33 @@
+
+
+/* Login and Sign up */
+#loginBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 300; 
+    -fx-min-height:400;
+}
+
+.loginSignUpTitle {
+    -fx-font-size:30;
+}
+
+.labelToLeft {
+    -fx-alignment: left;
+}
+
+.passwordTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30; 
+}
+
+.usernameTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30; 
+}
+
+.signInSignUpButton {
+    -fx-padding: 10 60;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
