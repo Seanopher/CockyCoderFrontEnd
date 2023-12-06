@@ -22,7 +22,7 @@
             <Label text="Last Name:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
-            <Label text="Email:" Class="labelToLeft"/>
+            <Label text="Email:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
             <Label text="Username:" styleClass="labelToLeft"/>
@@ -35,7 +35,7 @@
             <PasswordField styleClass="loginSignUpTextField"/>
 
             <Button text="Sign Up" onAction="#signUpButtonClicked" styleClass="signInSignUpButton"/>
-            <Hyperlink text="Already have an Account? Sign In" onAction="#signInButtonClicked"/>
+            <Hyperlink text="Already have an Account? Sign In" onAction="#logInButtonClicked"/>
          </children>
       </VBox>
    </children>

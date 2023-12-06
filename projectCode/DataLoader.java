@@ -108,8 +108,8 @@ public class DataLoader extends DataConstants {
                                     columnTitle,
                                     columnTitlesList));
                 }
-                Project projectInstance = new Project(name, id, users);
-                projects.add(projectInstance.newProject(name, id, users, columns));
+                Project projectInstance = new Project(name, id, uuidList);
+                projects.add(projectInstance.newProject(name, id, uuidList, columns));
             }
             return projects;
         } catch (Exception e) {

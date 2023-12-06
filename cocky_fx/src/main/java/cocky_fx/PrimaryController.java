@@ -17,7 +17,7 @@ public class PrimaryController {
     private PasswordField passwordTextField;
 
     @FXML
-    private void loginButtonClicked() {
+    private void logInButtonClicked() {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
 

@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 public class SecondaryController {
 
     @FXML
-    private void loginButtonClicked() {
+    private void logInButtonClicked() {
             SceneManager.getInstance().showLogin();
         
     }

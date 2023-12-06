@@ -22,7 +22,7 @@
             <Label text="Password: " styleClass="labelToLeft"/>
             <PasswordField styleClass="loginSignUpTextField"/>
 
-            <Button text="Sign In" onAction="#loginButtonClicked" styleClass="signInSignUpButton"/>
+            <Button text="Sign In" onAction="#logInButtonClicked" styleClass="signInSignUpButton"/>
             <Hyperlink text="Don't have an Account? Sign Up" onAction="#signUpButtonClicked"/>
          </children>
       </VBox>

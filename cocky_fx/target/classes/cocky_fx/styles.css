@@ -10,7 +10,11 @@
 }
 
 #signUpVBox {
-
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 300; 
+    -fx-min-height:400;
+    -fx-background-radius: 10;
 }
 
 .loginSignUpTitle {
