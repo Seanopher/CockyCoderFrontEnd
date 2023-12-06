@@ -42,13 +42,14 @@ public class DataLoader extends DataConstants {
                     projectUUIDList.add(UUID.fromString(projectId));
                 }
                
-                User user = new User(
+                User user = new newUser(
                         userID,
                         firstName,
                         lastName,
                         password,
                         username,
-                        userType);
+                        userType,
+                        projectUUIDList);
                 users.add(user);
             }
             return users;
