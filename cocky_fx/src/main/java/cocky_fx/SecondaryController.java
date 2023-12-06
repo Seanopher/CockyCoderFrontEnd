@@ -5,4 +5,14 @@ import javafx.fxml.FXML;
 
 public class SecondaryController {
 
+    @FXML
+    private void loginButtonClicked() {
+            SceneManager.getInstance().showLogin();
+        
+    }
+    @FXML
+    private void signUpButtonClicked() {
+            SceneManager.getInstance().showSignup();
+        
+    }
 }

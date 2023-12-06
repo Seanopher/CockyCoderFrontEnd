@@ -27,7 +27,6 @@ public class SceneManager {
             Parent root = loader.load();
             Scene scene = new Scene(root);
 
-            // Add the stylesheet to the scene
             scene.getStylesheets().add(getClass().getResource(styleSheet).toExternalForm());
 
             stage.setScene(scene);

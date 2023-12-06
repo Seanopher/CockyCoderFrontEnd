@@ -1,12 +1,16 @@
 
 
 /* Login and Sign up */
-#loginBox {
+#loginVBox {
     -fx-alignment:center;
     -fx-background-color:#54BCBD;
     -fx-max-width: 300; 
     -fx-min-height:350;
     -fx-background-radius: 10;
+}
+
+#signUpVBox {
+
 }
 
 .loginSignUpTitle {
@@ -18,12 +22,7 @@
     -fx-alignment: left;
 }
 
-.passwordTextField {
-    -fx-max-width: 200; 
-    -fx-max-height: 30; 
-}
-
-.usernameTextField {
+.loginSignUpTextField {
     -fx-max-width: 200; 
     -fx-max-height: 30; 
 }

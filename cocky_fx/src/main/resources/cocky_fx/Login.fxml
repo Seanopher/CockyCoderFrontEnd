@@ -12,15 +12,15 @@
 
    <children>
       <Label text="COCKY CODERS" styleClass="loginSignUpTitle"/>
-      <VBox id="loginBox">
+      <VBox id="loginVBox">
          <children>
             <Label text="Login" styleClass="loginSignUpTitle"/>
 
             <Label text="Username:" styleClass="labelToLeft"/>
-            <TextField styleClass = "usernameTextField"/>
+            <TextField styleClass = "loginSignUpTextField"/>
 
             <Label text="Password: " styleClass="labelToLeft"/>
-            <PasswordField styleClass="passwordTextField"/>
+            <PasswordField styleClass="loginSignUpTextField"/>
 
             <Button text="Sign In" onAction="#loginButtonClicked" styleClass="signInSignUpButton"/>
             <Hyperlink text="Don't have an Account? Sign Up" onAction="#signUpButtonClicked"/>
