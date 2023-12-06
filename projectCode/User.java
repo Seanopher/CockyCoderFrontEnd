@@ -1,5 +1,6 @@
 package projectCode;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -50,7 +51,7 @@ public class User {
      * @param userType
      * @return
      */
-    public void newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<Project> projects){
+    public void newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList projects){
         if(userID != null && firstName != null && lastName != null && password != null && userType != null){
             this.UUID = userID;
             this.userID = userID.toString();
@@ -60,7 +61,6 @@ public class User {
             this.username = username;
             this.userType = userType;
             this.projects = projects;
-            
         }
     }
 
