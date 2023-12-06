@@ -21,25 +21,37 @@ public class SceneManager {
         this.stage = stage;
     }
 
-    public void showLogin() {
+    private void loadScene(String fxmlFile, String styleSheet) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             Parent root = loader.load();
-            stage.setScene(new Scene(root));
+            Scene scene = new Scene(root);
+
+            // Add the stylesheet to the scene
+            scene.getStylesheets().add(getClass().getResource(styleSheet).toExternalForm());
+
+            stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void showHomepage() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
-            Parent root = loader.load();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+    public void showLogin() {
+        loadScene("Login.fxml", "styles.css");
     }
+
+    
+    public void showSignup() {
+        loadScene("Signup.fxml", "styles.css");
+    }
+
+
+    public void showHomepage() {
+        loadScene("Home.fxml", "styles.css");
+    }
+
+
+
 }
