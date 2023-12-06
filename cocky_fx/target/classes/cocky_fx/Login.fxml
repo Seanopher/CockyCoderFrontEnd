@@ -11,6 +11,7 @@
 <VBox alignment="CENTER" prefHeight="800" prefWidth="1440" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cocky_fx.PrimaryController">
 
    <children>
+      <Label text="COCKY CODERS" styleClass="loginSignUpTitle"/>
       <VBox id="loginBox">
          <children>
             <Label text="Login" styleClass="loginSignUpTitle"/>

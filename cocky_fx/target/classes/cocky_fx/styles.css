@@ -5,11 +5,13 @@
     -fx-alignment:center;
     -fx-background-color:#54BCBD;
     -fx-max-width: 300; 
-    -fx-min-height:400;
+    -fx-min-height:350;
+    -fx-background-radius: 10;
 }
 
 .loginSignUpTitle {
     -fx-font-size:30;
+    -fx-padding: 10 0 20 0 ; 
 }
 
 .labelToLeft {
