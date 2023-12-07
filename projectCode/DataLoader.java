@@ -80,7 +80,7 @@ public class DataLoader extends DataConstants {
                 String name = (String) projectDetails.get(PROJECT_NAME);
 
                 JSONArray projectUserIDs = (JSONArray) projectDetails.get(PROJECT_USERS);
-                for(Object userObj : users ){
+                for(Object userObj : projectUserIDs ){
                     String userId = (String) userObj;
                     uuidList.add(UUID.fromString(userId));
                 }

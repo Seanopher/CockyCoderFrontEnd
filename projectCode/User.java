@@ -16,8 +16,9 @@ public class User {
     private String userID;
     private String password;
     private String userType;
-    private ArrayList<Project> projects;
+    private ArrayList<UUID> projects;
     protected UserList userList;
+    protected ProjectList projectsList;
 
     /**
      * user constructor
@@ -51,7 +52,7 @@ public class User {
      * @param userType
      * @return
      */
-    public newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList projects){
+    public newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
         if(userID != null && firstName != null && lastName != null && password != null && userType != null){
             this.UUID = userID;
             this.userID = userID.toString();
@@ -88,14 +89,16 @@ public class User {
     public String getUserType(){
         return userType;
     }
-    public ArrayList<Project> getProjects(){
+    public ArrayList<UUID> getProjects(){
         return projects;
     }
     public ArrayList<String> displayProjects(User user){
         ArrayList<String> projectList = new ArrayList<String>();
+        projectsList = ProjectList.getInstance();
         for(int i = 0; i < user.getProjects().size(); ++i)
         {
-           projectList.add(user.getProjects().get(i).getProjectName());
+            
+           projectList.add(projectsList.getProject(projects.get(i)).getProjectName());
         }
         return projectList;
     }
@@ -121,7 +124,7 @@ public class User {
      */
     public boolean leaveProject(Project project){
         for(int i = 0; i < projects.size(); i++){
-            if(project.name.equalsIgnoreCase(projects.get(i).name)){
+            if(project.getPID().equals(projects.get(i))){
                 projects.remove(i);
                 return true;
             }

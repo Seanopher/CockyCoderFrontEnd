@@ -22,10 +22,10 @@
          <children>
             <Label text="Login" styleClass="loginSignUpTitle"/>
 
-            <Label text="Username:" styleClass="labelToLeft"/>
+            <Label text="Username:" />
             <TextField styleClass = "loginSignUpTextField"/>
 
-            <Label text="Password: " styleClass="labelToLeft"/>
+            <Label text="Password: " />
             <PasswordField styleClass="loginSignUpTextField"/>
 
             <Label text="Invalid"/>
