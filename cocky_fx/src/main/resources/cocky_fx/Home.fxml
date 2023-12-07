@@ -39,7 +39,7 @@
                 <Label text="Today's Tasks" styleClass="main-homescreen-headers"/>
                 <VBox>
                     <HBox styleClass ="tasks-list-hbox">
-                        <Label text="Task 1" styleClass="tasks">
+                        <Label text="Task 1" styleClass="tasks"/>
                     </HBox>
                 </VBox>
             </VBox>

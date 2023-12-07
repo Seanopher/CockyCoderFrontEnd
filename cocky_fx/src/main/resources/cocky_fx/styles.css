@@ -74,8 +74,26 @@
 }
 
 .main-homescreen-headers {
-    -fx-border-color: #f4ce98; /* Border color (you can use any color code) */
-    -fx-border-width: 2px;    /* Border width */
-    -fx-border-radius: 10px;  /* Border radius for rounded edges */
+    -fx-border-color: #f4ce98; 
+    -fx-border-width: 2px;    
+    -fx-border-radius: 10px;  
     -fx-padding: 10px; 
+}
+
+.tasks-list-hbox {
+    -fx-min-width: 200px; 
+    -fx-max-width: 400px; 
+    -fx-min-height: 100px; 
+    -fx-max-height: 200px; 
+    -fx-background-color:lightgray;
+    -fx-padding: 10;
+}
+
+.tasks-list-hbox > * {
+    -fx-margin: 5px; 
+}
+
+.tasks {
+    -fx-padding: 10 0 0 10;
+    -fx-font-size: 16px; 
 }
