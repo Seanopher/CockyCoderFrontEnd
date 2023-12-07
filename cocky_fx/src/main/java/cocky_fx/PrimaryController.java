@@ -16,7 +16,7 @@ public class PrimaryController {
     @FXML
     private PasswordField passwordTextField;
 
-    /* 
+    
     @FXML
     protected TextField newTaskNameField;
 
@@ -34,7 +34,7 @@ public class PrimaryController {
 
     @FXML
     private TextField newProjectNameField;
-    */
+    
 
 
     @FXML
@@ -54,7 +54,7 @@ public class PrimaryController {
     }
     @FXML
     private void signUpButtonClicked() {
-            SceneManager.getInstance().showNewTask();
+            SceneManager.getInstance().showSignup();
         
     }
     @FXML
@@ -76,7 +76,8 @@ public class PrimaryController {
     //NEEDS BACKEND
     @FXML
     private void RealDeleteTaskButtonClicked(){
-            SceneManager.getInstance().showHomepage(); //homepage or Project page?
+            SceneManager.getInstance().showHomepage(); 
+            //homepage or Project page?
         //Add code from backend here
     }
 }

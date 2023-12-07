@@ -62,7 +62,27 @@
     -fx-alignment: right;
 }
 
+.newTaskNameField {
+    -fx-max-width:200;
+    -fx-max-height: 100px;
+}
+
 .taskDescriptionField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.assignTeamMembersField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskTypeField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskToDoField {
     -fx-max-width: 200px;
     -fx-max-height: 100px;
 }
