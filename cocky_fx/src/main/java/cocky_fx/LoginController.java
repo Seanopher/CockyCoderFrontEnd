@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 
 
-public class PrimaryController {
+public class LoginController {
 
 
     @FXML

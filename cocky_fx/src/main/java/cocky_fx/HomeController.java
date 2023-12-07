@@ -20,6 +20,7 @@ public class HomeController {
 
     @FXML
     private ComboBox<String> projectDropdownNav;
+    
     @FXML
     private ComboBox<String> taskDropdownNav;
 

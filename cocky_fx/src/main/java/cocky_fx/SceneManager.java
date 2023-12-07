@@ -50,7 +50,10 @@ public class SceneManager {
     public void showHomepage() {
         loadScene("Home.fxml", "styles.css");
     }
+    
 
-
+    public void showProjectDisplay() {
+        loadScene("ProjectDisplay.fxml", "styles.css");
+    }
 
 }

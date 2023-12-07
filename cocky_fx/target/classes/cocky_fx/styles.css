@@ -95,3 +95,10 @@
     -fx-background-insets: 10px;
     -fx-border-insets: 10px;
 }
+
+
+/* Project Display */
+
+.main-project-content {
+    -fx-padding:100 0 0 100;
+}
