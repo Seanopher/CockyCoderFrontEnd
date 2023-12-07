@@ -89,11 +89,9 @@
     -fx-padding: 10;
 }
 
-.tasks-list-hbox > * {
-    -fx-margin: 5px; 
-}
-
 .tasks {
     -fx-padding: 10 0 0 10;
     -fx-font-size: 16px; 
+    -fx-background-insets: 10px;
+    -fx-border-insets: 10px;
 }
