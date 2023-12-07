@@ -17,6 +17,15 @@
     -fx-background-radius: 10;
 }
 
+#newTaskVBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 600; 
+    -fx-min-height:700;
+    -fx-background-radius: 10;
+
+}
+
 .loginSignUpTitle {
     -fx-font-size:30;
     -fx-padding: 10 0 20 0 ; 
@@ -32,6 +41,48 @@
     -fx-border-insets: 10px;
     -fx-background-insets: 10px;
 }
+
+
+.NewProjectTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30;
+
+}
+.ConfirmProjectButton {
+    -fx-padding: 10 60;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.labelToRight {
+    -fx-alignment: right;
+}
+
+.newTaskNameField {
+    -fx-max-width:200;
+    -fx-max-height: 100px;
+}
+
+.taskDescriptionField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.assignTeamMembersField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskTypeField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskToDoField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
 
 
 
@@ -89,11 +140,9 @@
     -fx-padding: 10;
 }
 
-.tasks-list-hbox > * {
-    -fx-margin: 5px; 
-}
-
 .tasks {
     -fx-padding: 10 0 0 10;
     -fx-font-size: 16px; 
+    -fx-background-insets: 10px;
+    -fx-border-insets: 10px;
 }
