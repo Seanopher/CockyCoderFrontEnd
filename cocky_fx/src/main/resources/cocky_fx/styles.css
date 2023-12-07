@@ -17,6 +17,15 @@
     -fx-background-radius: 10;
 }
 
+#newTaskVBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 600; 
+    -fx-min-height:700;
+    -fx-background-radius: 10;
+
+}
+
 .loginSignUpTitle {
     -fx-font-size:30;
     -fx-padding: 10 0 20 0 ; 
@@ -35,4 +44,25 @@
     -fx-padding: 10 60;
     -fx-border-insets: 10px;
     -fx-background-insets: 10px;
+}
+
+
+.NewProjectTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30;
+
+}
+.ConfirmProjectButton {
+    -fx-padding: 10 60;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.labelToRight {
+    -fx-alignment: right;
+}
+
+.taskDescriptionField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
 }
