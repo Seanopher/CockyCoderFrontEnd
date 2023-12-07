@@ -22,10 +22,6 @@
     -fx-padding: 10 0 20 0 ; 
 }
 
-.labelToLeft {
-    -fx-alignment: left;
-}
-
 .loginSignUpTextField {
     -fx-max-width: 200; 
     -fx-max-height: 30; 
@@ -36,3 +32,24 @@
     -fx-border-insets: 10px;
     -fx-background-insets: 10px;
 }
+
+
+
+/* Home Screen */
+.hbox-container {
+    -fx-spacing: 200; 
+    -fx-alignment:CENTER-LEFT;
+}
+.homeBrandLabel {
+    -fx-alignment: BASELINE_LEFT;
+    -fx-font-size: 20;
+}
+.homeCenterTitle {
+    -fx-alignment:center;
+    -fx-font-size: 20;
+}
+.homeRightUser {
+    -fx-alignment: BASELINE_RIGHT; 
+    -fx-font-size: 20;
+}
+

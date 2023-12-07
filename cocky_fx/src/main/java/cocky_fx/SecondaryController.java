@@ -12,7 +12,7 @@ public class SecondaryController {
     }
     @FXML
     private void signUpButtonClicked() {
-            SceneManager.getInstance().showSignup();
+            SceneManager.getInstance().showHomepage();
         
     }
 }
