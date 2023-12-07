@@ -7,6 +7,12 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
 
 <VBox alignment="CENTER" prefHeight="800" prefWidth="1440" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cocky_fx.PrimaryController">
 
@@ -22,7 +28,8 @@
             <Label text="Password: " />
             <PasswordField styleClass="loginSignUpTextField"/>
 
-            <Button text="Sign In" onAction="#logInButtonClicked" styleClass="signInSignUpButton"/>
+            <Label text="Invalid"/>
+            <Label fx:id="lbl_error" styleClass="labelToLeft" />
             <Hyperlink text="Don't have an Account? Sign Up" onAction="#signUpButtonClicked"/>
          </children>
       </VBox>
