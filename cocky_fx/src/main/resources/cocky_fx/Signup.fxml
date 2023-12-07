@@ -8,7 +8,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" prefHeight="800" prefWidth="1440" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cocky_fx.SecondaryController">
+<VBox alignment="CENTER" prefHeight="800" prefWidth="1440" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cocky_fx.SignupController">
 
    <children>
       <Label text="COCKY CODERS" styleClass="loginSignUpTitle"/>

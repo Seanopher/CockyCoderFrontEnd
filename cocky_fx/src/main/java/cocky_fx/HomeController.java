@@ -9,6 +9,10 @@ import javafx.scene.layout.HBox;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class HomeController {
     
@@ -20,7 +24,7 @@ public class HomeController {
 
     @FXML
     private ComboBox<String> projectDropdownNav;
-    
+
     @FXML
     private ComboBox<String> taskDropdownNav;
 
@@ -51,14 +55,42 @@ public class HomeController {
         
     
     private void handleProjectDropdownSelection() {
-        String selectedOption = projectDropdownNav.getValue();
+        String selectedProject = projectDropdownNav.getValue();
         // put in backend data to load a project when the value is selected
+        SceneManager.getInstance().showProjectDisplay();
+        loadScene("/cocky_fx/ProjectDisplay.fxml", selectedProject);
     }
 
     private void handleTaskDropdownSelection() {
-        String selectedOption = taskDropdownNav.getValue();
+        String selectedTask = taskDropdownNav.getValue();
         // put in backend data to load a project when the value is selected
+
+        //show selected task display
+        loadScene("/cocky_fx/TaskDisplay.fxml", selectedTask);
     }
 
+
+    private void loadScene(String fxmlPath, String selectedItem) {
+    try {
+        // Load the FXML file
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent root = loader.load();
+
+        // Access the controller of the loaded FXML file
+        Object controller = loader.getController();
+
+        // Pass the selected item to the controller
+        if(controller instanceof ProjectDisplayController){
+            ProjectDisplayController projectDisplayController = (ProjectDisplayController) controller;
+            projectDisplayController.setSelectedItem(selectedItem);
+        }
+        
+
+        Scene currentScene = projectDropdownNav.getScene();
+        currentScene.setRoot(root);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
 }
 
