@@ -15,11 +15,11 @@ public class Project {
     public String name;
     public String pID;
     protected UUID projectID;
-    protected ArrayList<User> users;
+    protected ArrayList<UUID> users;
     protected ArrayList<Columns> column;
     private static Project project;
     public User user;
-    
+    private UserList userList;
     /**
      * parameter constructor 
      * checks to see if the name and project are null then sets them
@@ -28,11 +28,10 @@ public class Project {
      * @param projectID unique id of project
      * @param users user on the project
      */
-    public Project(String name, String projectID, ArrayList<User> users){
+    public Project(String name, String projectID, ArrayList<UUID> users){
         if(name != null && projectID != null){
             this.name = name;
-            this.pID = projectID.toString();
-            
+            this.projectID = projectID;
         }
         this.users = users;
         this.column = new ArrayList<Columns>();
@@ -47,7 +46,7 @@ public class Project {
      */
  
 
-    public Project newProject(String name, String projectID, ArrayList<User> users, ArrayList<Columns> column){
+    public Project newProject(String name, String projectID, ArrayList<UUID> users, ArrayList<Columns> column){
         Project project = new Project(name, projectID, users);
         project.setColumns(column);
         return project;
@@ -63,10 +62,13 @@ public class Project {
     public String getProjectName(){
         return name;
     }
+    public UUID getPID(){
+        return projectID;
+    }
     public String getProjectID(){
         return pID;
     }
-    public ArrayList<User> getUsers(){
+    public ArrayList<UUID> getUsers(){
         return users;
     }
     public String getUserName(){
@@ -90,8 +92,11 @@ public class Project {
      * prints out the users in the project
      */
     public void displayUsers(){
+        userList = UserList.getInstance();
         for(int i = 0; i < users.size(); ++i){
-            System.out.println(users.get(i).getUsername());
+            if(getUsers().get(i).equals(users.get(i))){
+                System.out.println(userList.getUser(users.get(i)));
+            }
         }
     }
     
