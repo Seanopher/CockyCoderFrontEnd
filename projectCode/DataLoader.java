@@ -68,7 +68,7 @@ public class DataLoader extends DataConstants {
         List<UUID> uuidList = new ArrayList<>();
         try {
             FileReader reader = new FileReader(PROJECT_FILE_NAME);
-            JSONObject obj = (JSONObject) new JSONParser().parse(reader);
+            //JSONObject obj = (JSONObject) new JSONParser().parse(reader);
             JSONArray projectArray = (JSONArray) obj.get("project");
 
             TaskList taskList = TaskList.getInstance();
