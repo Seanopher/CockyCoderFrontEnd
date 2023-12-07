@@ -2,21 +2,10 @@ package cocky_fx;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.event.ActionEvent;
 
+public class NewTask {
 
-public class PrimaryController {
-
-
-    @FXML
-    private TextField usernameTextField;
-
-    @FXML
-    private PasswordField passwordTextField;
-
-    /* 
     @FXML
     protected TextField newTaskNameField;
 
@@ -32,26 +21,9 @@ public class PrimaryController {
     @FXML
     private TextField taskToDoField;
 
-    */
-
-    @FXML
-    private TextField newProjectNameField;
-    
-
-
     @FXML
     private void logInButtonClicked() {
-        String username = usernameTextField.getText();
-        String password = passwordTextField.getText();
-
-
-        //Need to input logic from backend here
-        if(!username.isEmpty() && !password.isEmpty()){
-            SceneManager.getInstance().showHomepage();
-        }
-        else{
-            System.out.println("invalid");
-        }
+            SceneManager.getInstance().showLogin();
         
     }
     @FXML
@@ -59,13 +31,7 @@ public class PrimaryController {
             SceneManager.getInstance().showSignup();
         
     }
-    @FXML
-    private void ConfirmProjectButtonClicked() {
-            SceneManager.getInstance().showLogin();
-            //this needs to be changed later
-    }
 
-    /* 
     @FXML
     private void ConfirmTaskButtonClicked() {
             SceneManager.getInstance().showLogin();
@@ -83,5 +49,4 @@ public class PrimaryController {
             //homepage or Project page?
         //Add code from backend here
     }
-    */
 }

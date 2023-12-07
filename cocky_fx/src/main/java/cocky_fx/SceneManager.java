@@ -51,6 +51,17 @@ public class SceneManager {
         loadScene("Home.fxml", "styles.css");
     }
 
+    public void showNewProject() {
+        loadScene("NewProject.fxml","styles.css");
+    }
 
+    public void showNewTask() {
+        loadScene("NewTask.fxml", "styles.css");
+    }
+    public void showDeleteTask() {
+        loadScene("DeleteTask.fxml", "styles.css");
+    }
+
+    
 
 }
