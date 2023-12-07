@@ -38,7 +38,9 @@ public class ProjectFacade {
         else
             return false;
     }
-
+    public User getCurrentUser(){
+        return user;
+    }
     /**
      * calls data writer to log out and saves the log out
      * @param user user to log out
@@ -60,9 +62,11 @@ public class ProjectFacade {
      * @return the user or null
      */
     public User createUser(UUID userID, String firstName, String lastName, String password, String username, String userType){
-        user = new User(userType, firstName, lastName, password, username, userType);
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null)
+        user = new User(userID, firstName, lastName, password, username, userType);
+        if(userID != null && firstName != null && lastName != null && password != null && userType != null){
+            userList.addUser(userID, firstName, lastName, username, password, userType);
             return user;
+        }
         else
             return null;
     }

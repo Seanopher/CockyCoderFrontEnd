@@ -53,6 +53,19 @@ public class UserList {
             */
         return null;
     }
+
+    public boolean addUser(String firstName, String lastName, String password, String username){
+        for(User user: users)
+            {
+                if(user.getUsername().equals(userName))
+                {
+                    return false;
+                }
+            }
+            UUID userID = userID.randomUUID();
+            userList.add(new User(userID, firstName, lastName, password, username, "user"));
+            return true;
+    }
     /*
      * logs in user by calling DataLoader for Users and
      * searching list for specific User
