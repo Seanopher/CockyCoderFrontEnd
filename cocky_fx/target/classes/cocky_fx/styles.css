@@ -1,0 +1,155 @@
+
+
+/* Login and Sign up */
+#loginVBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 300; 
+    -fx-min-height:350;
+    -fx-background-radius: 10;
+}
+
+#signUpVBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 300; 
+    -fx-min-height:400;
+    -fx-background-radius: 10;
+}
+
+#newTaskVBox {
+    -fx-alignment:center;
+    -fx-background-color:#54BCBD;
+    -fx-max-width: 600; 
+    -fx-min-height:700;
+    -fx-background-radius: 10;
+
+}
+
+.loginSignUpTitle {
+    -fx-font-size:30;
+    -fx-padding: 10 0 20 0 ; 
+}
+
+.loginSignUpTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30; 
+}
+
+.signInSignUpButton {
+    -fx-padding: 10 60;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+
+.NewProjectTextField {
+    -fx-max-width: 200; 
+    -fx-max-height: 30;
+
+}
+.ConfirmProjectButton {
+    -fx-padding: 10 60;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.labelToRight {
+    -fx-alignment: right;
+}
+
+.newTaskNameField {
+    -fx-max-width:200;
+    -fx-max-height: 100px;
+}
+
+.taskDescriptionField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.assignTeamMembersField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskTypeField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+.taskToDoField {
+    -fx-max-width: 200px;
+    -fx-max-height: 100px;
+}
+
+
+
+
+/* Home Screen */
+.main-hbox-container {
+    -fx-spacing: 200; 
+    -fx-alignment:TOP-LEFT;
+    -fx-background-color:#54BCBD;
+    -fx-padding: 10 10;
+}
+.homeBrandLabel {
+    -fx-alignment: BASELINE_LEFT;
+    -fx-font-size: 20;
+}
+.homeCenterTitle {
+    -fx-alignment:center;
+    -fx-font-size: 20;
+}
+.homeRightUser {
+    -fx-alignment: BASELINE_RIGHT; 
+    -fx-font-size: 20;
+}
+
+.combo-box {
+    -fx-text-fill: white; 
+    -fx-font-size: 14px; 
+    -fx-background-color: transparent; 
+    -fx-border-width: 0;
+    -fx-padding: 20 0 0 15;
+
+}
+
+.combo-box-popup {
+    -fx-background-color: #333; 
+    -fx-text-fill: white; 
+}
+
+.main-homescreen-content {
+    -fx-padding:100 0 0 200;
+}
+
+.main-homescreen-headers {
+    -fx-border-color: #f4ce98; 
+    -fx-border-width: 2px;    
+    -fx-border-radius: 10px;  
+    -fx-padding: 10px; 
+}
+
+.tasks-list-hbox {
+    -fx-min-width: 200px; 
+    -fx-max-width: 400px; 
+    -fx-min-height: 100px; 
+    -fx-max-height: 200px; 
+    -fx-background-color:lightgray;
+    -fx-padding: 10;
+}
+
+.tasks {
+    -fx-padding: 10 0 0 10;
+    -fx-font-size: 16px; 
+    -fx-background-insets: 10px;
+    -fx-border-insets: 10px;
+}
+
+
+/* Project Display */
+
+.main-project-content {
+    -fx-padding:100 0 0 100;
+}

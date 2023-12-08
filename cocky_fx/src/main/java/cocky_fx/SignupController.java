@@ -15,7 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import projectCode.User;
+//import projectCode.User;
+import java.util.UUID;
 
 public class SignupController {
         @FXML private AnchorPane signup_pane;
