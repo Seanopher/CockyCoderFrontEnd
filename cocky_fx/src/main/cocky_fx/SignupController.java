@@ -17,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import projectCode.projectFacade;
 import projectCode.User;
+import java.util.UUID;
 
 
 public class SignupController {
@@ -27,6 +28,7 @@ public class SignupController {
         @FXML private TextField txt_last_name;
         private Label lbl_error;
         private ProjectFacade project;
+        private UUID uUID;
         
         @FXML
         private void logInButtonClicked() {
@@ -36,7 +38,7 @@ public class SignupController {
     @FXML
     private void signUpButtonClicked(MouseEvent event) throws IOException{
         
-        String userID = "";
+        String userID = uUID.randomUUID().toString();
         String username = txt_username.getText();
         String password = txt_password.getText();
         String firstName = txt_first_name.getText();
