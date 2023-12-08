@@ -9,21 +9,18 @@ import javafx.scene.layout.HBox;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.event.EventHandler;
+import projectCode.*;
 
 public class HomeController {
     
-    @FXML
-    private ImageView imageView;
-
-    @FXML
-    private HBox hboxContainer;
-
-    @FXML
-    private ComboBox<String> projectDropdownNav;
-    @FXML
-    private ComboBox<String> taskDropdownNav;
+    @FXML private ProjectFacade projectFacade;
+    @FXML private ImageView imageView;
+    @FXML private HBox hboxContainer;
+    @FXML private ComboBox<String> projectDropdownNav;
+    @FXML private ComboBox<String> taskDropdownNav;
 
     public void initialize() {
+        projectFacade = new ProjectFacade();
         //Image Initialization
         Image image = new Image(getClass().getResource("/cocky_fx/images/user-icon.png").toExternalForm());
         imageView.setImage(image);
@@ -51,7 +48,11 @@ public class HomeController {
     
     private void handleProjectDropdownSelection() {
         String selectedOption = projectDropdownNav.getValue();
-        // put in backend data to load a project when the value is selected
+        Project project = projectFacade.project(selectedProject);
+
+        ArrayList<String> columns = projectFacade.displayColumns(project);
+        taskDropdownNav.getItems().clear();
+        taskDropdownNav.getItems().addAll(columns);
     }
 
     private void handleTaskDropdownSelection() {
