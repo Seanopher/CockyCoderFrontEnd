@@ -40,7 +40,7 @@ public class SignupController {
     @FXML
     private void signUpButtonClicked(MouseEvent event) throws IOException{
         
-        String userID = uUID.randomUUID().toString();
+        UUID userID = uUID.randomUUID();
         String username = txt_username.getText();
         String password = txt_password.getText();
         String firstName = txt_first_name.getText();
@@ -54,10 +54,10 @@ public class SignupController {
                 return;
         }
         UserList userList = UserList.getInstance();
-        // if(project.createUser(userID, firstName, lastName, password, username, userType) == null){
-        //     lbl_error.setText("Sorry, this user could not be created.");
-        //     return;
-        // }
+        if(project.createUser(userID, firstName, lastName, password, username, userType) == null){
+             lbl_error.setText("Sorry, this user could not be created.");
+             return;
+        }
         project.login(username, password);
         User user = project.getCurrentUser();
         SceneManager.getInstance().showHomepage();

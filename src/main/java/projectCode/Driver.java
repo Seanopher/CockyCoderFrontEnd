@@ -1,18 +1,19 @@
 package projectCode;
+/* 
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
-/**
+
  * @author Cocky Coders
  * runs the project with a testing scenario
- */
+ 
 public class Driver {
 
     /**
      * Instance Fields
-     */
+     
     private ProjectFacade facade;
     private Project electric_Missles;
     private Project soap_Free_Washers;
@@ -25,7 +26,7 @@ public class Driver {
      * creates the facade
      * creates 3 Users
      * creates 3 Projects
-     */
+     
     Driver(){
         facade = new ProjectFacade();
         atticus = new User("01", "Atticus", "Madden", "Madden23", "AMadden", "ADMIN");
@@ -38,7 +39,7 @@ public class Driver {
 
     /**
      * runs the scenario
-     */
+     
     public void run(){
         scenario();
     }
@@ -65,7 +66,7 @@ public class Driver {
      * in the try and catch:
      * creates new instances of projects, names it, makes a new file, then adds columns to the project
      * it will then write to the file
-     */
+     
     public void scenario(){
         facade.joinProject(electric_Missles, atticus);
         facade.joinProject(soap_Free_Washers, atticus);
@@ -127,3 +128,4 @@ public class Driver {
     //     driver.run();
     // }
 }
+*/

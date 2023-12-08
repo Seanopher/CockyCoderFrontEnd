@@ -28,7 +28,7 @@ public class Project {
      * @param projectID unique id of project
      * @param users user on the project
      */
-    public Project(String name, String projectID, ArrayList<UUID> users){
+    public Project(String name, UUID projectID, ArrayList<UUID> users){
         if(name != null && projectID != null){
             this.name = name;
             this.projectID = projectID;
@@ -46,7 +46,7 @@ public class Project {
      */
  
 
-    public Project newProject(String name, String projectID, ArrayList<UUID> users, ArrayList<Columns> column){
+    public Project newProject(String name, UUID projectID, ArrayList<UUID> users, ArrayList<Columns> column){
         Project project = new Project(name, projectID, users);
         project.setColumns(column);
         return project;
@@ -59,6 +59,7 @@ public class Project {
      * String name (projectName)
      * String pID (projectID)
      */
+    
     public String getProjectName(){
         return name;
     }
