@@ -31,7 +31,7 @@ public class User {
      */
     public User(String userID, String firstName, String lastName, String password, String username, String userType)
     {
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null)
+        if(userID != null && firstName != null && lastName != null && password != null && userType != null && username != null)
         {
         this.projects = new ArrayList<Project>();
         this.userID = userID;
@@ -53,7 +53,7 @@ public class User {
      * @return
      */
     public newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null){
+        if(userID != null && firstName != null && lastName != null && password != null && userType != null && username != null){
             this.UUID = userID;
             this.userID = userID.toString();
             this.firstName = firstName;
