@@ -53,7 +53,7 @@ public class User {
      * @param userType
      * @return
      */
-    public void newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
+    public User(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
         if(userID != null && firstName != null && lastName != null &&  username != null && password != null && userType != null){
             this.uUID = userID;
             this.userID = userID.toString();

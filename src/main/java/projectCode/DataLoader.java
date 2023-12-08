@@ -24,7 +24,7 @@ public class DataLoader extends DataConstants {
             FileReader reader = new FileReader(USER_FILE_NAME);
             //JSONObject obj = (JSONObject) new JSONParser().parse(reader);
             JSONArray userArray = (JSONArray) new JSONParser().parse(reader);
-            List<UUID> projectUUIDList = new ArrayList<>();
+            ArrayList<UUID> projectUUIDList = new ArrayList<>();
 
             for (Object userObj : userArray) {
                 JSONObject userDetails = (JSONObject) userObj;
@@ -32,18 +32,19 @@ public class DataLoader extends DataConstants {
                 String firstName = (String) userDetails.get(USER_FIRST_NAME);
                 String lastName = (String) userDetails.get(USER_LAST_NAME);
                 String userID = (String) userDetails.get(USER);
+                UUID userUUID = UUID.fromString(userID);
                 String password = (String) userDetails.get(USER_PASSWORD);
                 String username = (String) userDetails.get(USER_USERNAME);
                 String userType = (String) userDetails.get(USER_USERTYPE);
 
-                JSONArray projects = (JSONArray) userJSON.get(USER_PROJECTS);
+                JSONArray projects = (JSONArray) userDetails.get(USER_PROJECTS);
                 for (Object projectObj : projects) {
                     String projectId = (String) projectObj;
                     projectUUIDList.add(UUID.fromString(projectId));
                 }
                
-                User user = new newUser(
-                        userID,
+                User user = new User(
+                        userUUID,
                         firstName,
                         lastName,
                         password,
@@ -65,7 +66,7 @@ public class DataLoader extends DataConstants {
      */
     public ArrayList<Project> loadProjects() {
         ArrayList<Project> projects = new ArrayList<Project>();
-        List<UUID> uuidList = new ArrayList<>();
+        ArrayList<UUID> uuidList = new ArrayList<>();
         try {
             FileReader reader = new FileReader(PROJECT_FILE_NAME);
             //JSONObject obj = (JSONObject) new JSONParser().parse(reader);
@@ -78,6 +79,7 @@ public class DataLoader extends DataConstants {
 
                 String id = (String) projectDetails.get(PROJECT_ID);
                 String name = (String) projectDetails.get(PROJECT_NAME);
+                UUID projectUUID = UUID.fromString(id);
 
                 JSONArray projectUserIDs = (JSONArray) projectDetails.get(PROJECT_USERS);
                 for(Object userObj : projectUserIDs ){
@@ -108,8 +110,8 @@ public class DataLoader extends DataConstants {
                                     columnTitle,
                                     columnTitlesList));
                 }
-                Project projectInstance = new Project(name, id, uuidList);
-                projects.add(projectInstance.newProject(name, id, uuidList, columns));
+                Project projectInstance = new Project(name, projectUUID, uuidList);
+                projects.add(projectInstance.newProject(name, projectUUID, uuidList, columns));
             }
             return projects;
         } catch (Exception e) {
