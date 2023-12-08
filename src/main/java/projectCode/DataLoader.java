@@ -36,13 +36,13 @@ public class DataLoader extends DataConstants {
                 String username = (String) userDetails.get(USER_USERNAME);
                 String userType = (String) userDetails.get(USER_USERTYPE);
 
-                JSONArray projects = (JSONArray) userJSON.get(USER_PROJECTS);
+                JSONArray projects = (JSONArray) userDetails.get(USER_PROJECTS);
                 for (Object projectObj : projects) {
                     String projectId = (String) projectObj;
                     projectUUIDList.add(UUID.fromString(projectId));
                 }
                
-                User user = new newUser(
+                User user = new User.newUser(
                         userID,
                         firstName,
                         lastName,
