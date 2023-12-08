@@ -4,9 +4,8 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import library.App;
 import javafx.event.ActionEvent;
-
-
 public class LoginController {
 
 
@@ -55,10 +54,10 @@ public class LoginController {
         
     }
     @FXML
-    private void signUpButtonClicked() {
-            SceneManager.getInstance().showSignup();
-        
+    private void signUpButtonClicked() throws IOException{
+        App.setRoot("Signup");
     }
+
     @FXML
     private void ConfirmProjectButtonClicked() {
             SceneManager.getInstance().showLogin();

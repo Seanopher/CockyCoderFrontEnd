@@ -1,6 +1,7 @@
 package projectCode;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * @author Cocky Coders
@@ -40,7 +41,7 @@ public class ProjectList {
         return projects;
     }
 
-    public Project getProject(String projectID){
+    public Project getProject(UUID projectID){
         for (Project project : projects){
             if (project.getProjectID().equals(projectID))
                 return project;
@@ -50,7 +51,7 @@ public class ProjectList {
     }
 
     public void add(Project project) {
-        Project newProject = new Project(project.getProjectName(), project.getProjectID(), project.getUsers());
+        Project newProject = new Project(project.getProjectName(), project.getPID(), project.getUsers());
         // You can also set the columns if needed
         newProject.setColumns(project.getColumns());
     }

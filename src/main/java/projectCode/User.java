@@ -11,7 +11,7 @@ import java.util.UUID;
 public class User {
     private String firstName;
     private String lastName; 
-    private UUID UUID;
+    private UUID uUID;
     private String username;
     private String userID;
     private String password;
@@ -29,12 +29,13 @@ public class User {
      * @param username
      * @param userType
      */
-    public User(String userID, String firstName, String lastName, String password, String username, String userType)
+    public User(UUID userID, String firstName, String lastName, String password, String username, String userType)
     {
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null)
+        if(userID != null && firstName != null && lastName != null && username !=null && password != null && userType != null)
         {
-        this.projects = new ArrayList<Project>();
-        this.userID = userID;
+        this.projects = new ArrayList<UUID>();
+        this.userID = userID.toString();
+        this.uUID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
@@ -52,9 +53,9 @@ public class User {
      * @param userType
      * @return
      */
-    public newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null){
-            this.UUID = userID;
+    public void newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
+        if(userID != null && firstName != null && lastName != null &&  username != null && password != null && userType != null){
+            this.uUID = userID;
             this.userID = userID.toString();
             this.firstName = firstName;
             this.lastName = lastName;
@@ -69,7 +70,7 @@ public class User {
      * Getters
      */
     public User getUser(UUID userID){
-        return userList.getUser(UUID);
+        return userList.getUser(userID);
     }
     public String getUUID(){
         return userID;
@@ -110,7 +111,7 @@ public class User {
      */
     public boolean joinProject(Project project){
         if(project != null){
-            projects.add(project);
+            projects.add(project.getPID());
             return true;
         }
         return false;
