@@ -22,9 +22,6 @@
             <Label text="Last Name:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
-            <Label text="Email:" styleClass="labelToLeft"/>
-            <TextField styleClass = "loginSignUpTextField"/>
-
             <Label text="Username:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
