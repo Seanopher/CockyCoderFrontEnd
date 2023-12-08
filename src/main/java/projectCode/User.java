@@ -33,7 +33,7 @@ public class User {
     {
         if(userID != null && firstName != null && lastName != null && password != null && userType != null)
         {
-        this.projects = new ArrayList<Project>();
+        this.projects = new ArrayList<UUID>();
         this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -52,7 +52,7 @@ public class User {
      * @param userType
      * @return
      */
-    public newUser(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
+    public User(UUID userID, String firstName, String lastName, String password, String username, String userType, ArrayList<UUID> projects){
         if(userID != null && firstName != null && lastName != null && password != null && userType != null){
             this.UUID = userID;
             this.userID = userID.toString();
