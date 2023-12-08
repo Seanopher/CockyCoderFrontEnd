@@ -79,6 +79,7 @@ public class DataLoader extends DataConstants {
 
                 String id = (String) projectDetails.get(PROJECT_ID);
                 String name = (String) projectDetails.get(PROJECT_NAME);
+                UUID projectUUID = UUID.fromString(id);
 
                 JSONArray projectUserIDs = (JSONArray) projectDetails.get(PROJECT_USERS);
                 for(Object userObj : projectUserIDs ){
@@ -109,8 +110,8 @@ public class DataLoader extends DataConstants {
                                     columnTitle,
                                     columnTitlesList));
                 }
-                Project projectInstance = new Project(name, id, uuidList);
-                projects.add(projectInstance.newProject(name, id, uuidList, columns));
+                Project projectInstance = new Project(name, projectUUID, uuidList);
+                projects.add(projectInstance.newProject(name, projectUUID, uuidList, columns));
             }
             return projects;
         } catch (Exception e) {
