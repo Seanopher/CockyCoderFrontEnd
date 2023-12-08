@@ -61,10 +61,10 @@ public class ProjectFacade {
      * @param userType user type
      * @return the user or null
      */
-    public User createUser(UUID userID, String firstName, String lastName, String password, String username, String userType){
-        user = new User(userID, firstName, lastName, password, username, userType);
-        if(userID != null && firstName != null && lastName != null && password != null && userType != null){
-            userList.addUser(userID, firstName, lastName, username, password, userType);
+    public User createUser(UUID userID, String firstName, String lastName, String password, String username){
+        user = new User(userID, firstName, lastName, password, username, "user");
+        if(userID != null && firstName != null && lastName != null && password != null){
+            userList.addUser(firstName, lastName, username, password);
             return user;
         }
         else

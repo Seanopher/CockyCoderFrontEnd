@@ -7,6 +7,7 @@ public class UserList {
     private static UserList userList;
     private ArrayList<User> users;
     private DataLoader dataLoader;
+    private UUID userID;
 
     /*
      * calls DataLoader to load the Arraylist
@@ -57,13 +58,13 @@ public class UserList {
     public boolean addUser(String firstName, String lastName, String password, String username){
         for(User user: users)
             {
-                if(user.getUsername().equals(userName))
+                if(user.getUsername().equals(username))
                 {
                     return false;
                 }
             }
-            UUID userID = userID.randomUUID();
-            userList.add(new User(userID, firstName, lastName, password, username, "user"));
+            userID = userID.randomUUID();
+            users.add(new User(userID, firstName, lastName, password, username, "user"));
             return true;
     }
     /*
