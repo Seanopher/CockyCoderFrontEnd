@@ -23,14 +23,14 @@
             <Label text="Login" styleClass="loginSignUpTitle"/>
 
             <Label text="Username:" />
-            <TextField styleClass = "loginSignUpTextField"/>
+            <TextField fx:id = "usernameTextField" styleClass = "loginSignUpTextField"/>
 
             <Label text="Password: " />
-            <PasswordField styleClass="loginSignUpTextField"/>
+            <PasswordField fx:id = "passwordTextField" styleClass="loginSignUpTextField"/>
 
-            <Label text="Invalid"/>
+            <Hyperlink text = "Login" onAction="#logInButtonClicked"/>
             <Label fx:id="lbl_error" styleClass="labelToLeft" />
-            <Hyperlink text="Don't have an Account? Sign Up" onAction="#signUpButtonClicked"/>
+            <Hyperlink text="Sign Up" onAction="#signUpButtonClicked"/>
          </children>
       </VBox>
    </children>

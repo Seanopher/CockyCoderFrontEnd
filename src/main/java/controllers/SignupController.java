@@ -54,7 +54,7 @@ public class SignupController {
                 return;
         }
         UserList userList = UserList.getInstance();
-        if(project.createUser(userID, firstName, lastName, password, username, userType) == null){
+        if(project.createUser(userID, firstName, lastName, password, username) == null){
              lbl_error.setText("Sorry, this user could not be created.");
              return;
         }
