@@ -59,29 +59,5 @@ public class LoginController {
             SceneManager.getInstance().showSignup();
         
     }
-    @FXML
-    private void ConfirmProjectButtonClicked() {
-            SceneManager.getInstance().showLogin();
-            //this needs to be changed later
-    }
 
-    /* 
-    @FXML
-    private void ConfirmTaskButtonClicked() {
-            SceneManager.getInstance().showLogin();
-            //This needs to be CHANGED later too
-    }
-    @FXML
-    private void DeleteTaskButtonClicked(){
-            SceneManager.getInstance().showDeleteTask();
-    }
-
-    //NEEDS BACKEND
-    @FXML
-    private void RealDeleteTaskButtonClicked(){
-            SceneManager.getInstance().showHomepage(); 
-            //homepage or Project page?
-        //Add code from backend here
-    }
-    */
 }
