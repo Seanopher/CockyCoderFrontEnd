@@ -1,6 +1,8 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
@@ -33,6 +35,7 @@ public class HomeController {
         //     }
 
         //Project Dropdown Navigation 
+        handleProjectDropdownSelection();
         //input backend list of projects the user has 
         projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
         projectDropdownNav.setValue("Projects");
@@ -48,9 +51,9 @@ public class HomeController {
     
     private void handleProjectDropdownSelection() {
         String selectedOption = projectDropdownNav.getValue();
-        Project project = projectFacade.project(selectedProject);
+        Project project = projectFacade.project(selectedOption);
 
-        ArrayList<String> columns = projectFacade.displayColumns(project);
+        ArrayList<String> columns = projectFacade.displayColumns(project, null);
         taskDropdownNav.getItems().clear();
         taskDropdownNav.getItems().addAll(columns);
     }
