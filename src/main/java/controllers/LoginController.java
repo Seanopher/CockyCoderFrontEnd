@@ -6,7 +6,22 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import library.App;
 import javafx.event.ActionEvent;
-public class LoginController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import model.*;
+public class LoginController implements Initializable{
 
 
     @FXML
@@ -39,29 +54,39 @@ public class LoginController {
 
 
     @FXML
-    private void logInButtonClicked() {
-        String username = usernameTextField.getText();
-        String password = passwordTextField.getText();
+    private void logInButtonClicked() throws IOException{
+        //String username = usernameTextField.getText();
+        //String password = passwordTextField.getText();
 
 
         //Need to input logic from backend here
-        if(!username.isEmpty() && !password.isEmpty()){
-            SceneManager.getInstance().showHomepage();
-        }
-        else{
+        /* 
+        if(username.isEmpty() || password.isEmpty()){
             System.out.println("invalid");
-        }
+            return;
+        }          
+        */  
+        App.setRoot("Home");
+        
         
     }
+    
     @FXML
     private void signUpButtonClicked() throws IOException{
         App.setRoot("Signup");
     }
 
+    
+    /* 
     @FXML
     private void ConfirmProjectButtonClicked() {
             SceneManager.getInstance().showLogin();
             //this needs to be changed later
+    }
+    */
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+
     }
 
     /* 

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.Region?>
 
 <!-- //prefHeight="800" prefWidth="1440" -->
-<StackPane  prefHeight="800" prefWidth="1440" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cocky_fx.HomeController">
+<StackPane  prefHeight="800" prefWidth="1440" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
     <children>
     <VBox styleClass="main-vbox-container">
         <HBox styleClass="main-hbox-container"> 
