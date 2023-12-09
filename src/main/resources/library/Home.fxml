@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.net.URL?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
@@ -14,12 +13,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.Region?>
-
-<!-- //prefHeight="800" prefWidth="1440" -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.shape.Rectangle?>
 <StackPane  prefHeight="800" prefWidth="1440" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
     <children>
-    <VBox styleClass="main-vbox-container">
-        <HBox styleClass="main-hbox-container"> 
+        <VBox styleClass="main-vbox-container">
+            <HBox styleClass="main-hbox-container">
                 <Label text="COCKY CODERS" styleClass="homeBrandLabel"/>
                 <Region HBox.hgrow="ALWAYS"/>
                 <Label text="Project 1" styleClass="homeCenterTitle"/>
@@ -29,29 +34,79 @@
                         <Image url="@../images/user-icon.png" />
                     </image>
                 </ImageView>
-        </HBox>
-        <HBox>
-            <VBox styleClass="navigation-vbox">
-                <ComboBox fx:id="projectDropdownNav" prefWidth="150"/>
-                <ComboBox fx:id="taskDropdownNav" prefWidth="150"/>
-            </VBox>
-            <VBox styleClass="main-homescreen-content">
-                <Label text="Today's Tasks" styleClass="main-homescreen-headers"/>
-                <VBox>
-                    <HBox styleClass ="tasks-list-hbox">
-                        <Label text="Task 1" styleClass="tasks"/>
+            </HBox>
+            <GridPane styleClass="gridpane" alignment="CENTER" hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+                <!-- Row Constraints -->
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS"/>
+                </rowConstraints>
+                <!-- Swimlane 1 -->
+                <Label text="To Do" GridPane.columnIndex="0" styleClass="swimLaneTitleToDo">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="10" styleClass="swimLane" VBox.vgrow="ALWAYS" alignment="CENTER">
+                    
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Columns class createColumn method" style="-fx-font-size: 14;" /> 
+                    </HBox>
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Datawriter savetask method" style="-fx-font-size: 14;" /> 
+                    </HBox>
+                </VBox> 
+                <!-- Swimlane 2 --> 
+                <Label text="In Progress" GridPane.columnIndex="1" styleClass="swimLaneTitleDoing">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" spacing="10" styleClass="swimLane"  alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Comment class createComment method" style="-fx-font-size: 14;" /> 
                     </HBox>
                 </VBox>
-            </VBox>
-        </HBox>
-    </VBox>
-    
-
-    <!-- <padding>
+                <!-- Swimlane 3 -->
+                <Label text="Done" GridPane.columnIndex="2" styleClass="swimLaneTitleDone">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="1" spacing="10" styleClass="swimLane"  alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Structure for DataWriter" style="-fx-font-size: 14;" /> 
+                    </HBox>
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Add simple driver" style="-fx-font-size: 14;" /> 
+                    </HBox>
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50">
+                        <Label text="Add code for UI (driver)" style="-fx-font-size: 14;" /> 
+                    </HBox>
+                </VBox>
+                <!-- Swimlane 4 -->
+                <Label text="New Column" GridPane.columnIndex="3" styleClass="swimLaneTitlePlus">
+                    <font>
+                        <Font size="16"/>
+                    </font>
+                </Label>
+                <VBox GridPane.columnIndex="3" GridPane.rowIndex="1" spacing="10" styleClass="swimLane"  alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <HBox  style="-fx-background-color: lightgray; -fx-padding: 10; -fx-background-radius: 10;" prefWidth="150" prefHeight="50" alignment="CENTER" >
+                        <Label text="+" style="-fx-font-size: 40;" /> 
+                    </HBox>
+                </VBox>
+            </GridPane>
+        </VBox>
+        <!-- <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding> -->
     </children>
     <stylesheets>
-      <URL value="@styles.css" />
-   </stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
 </StackPane>

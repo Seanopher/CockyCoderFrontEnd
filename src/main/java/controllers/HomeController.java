@@ -34,15 +34,15 @@ public class HomeController {
 
         //Project Dropdown Navigation 
         //input backend list of projects the user has 
-        projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
-        projectDropdownNav.setValue("Projects");
-        projectDropdownNav.setOnAction(event -> handleProjectDropdownSelection()); 
+        // projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
+        // projectDropdownNav.setValue("Projects");
+        // projectDropdownNav.setOnAction(event -> handleProjectDropdownSelection()); 
         
-        //Task Dropdown Navigation 
-        //input backend list of tasks the user has 
-        taskDropdownNav.getItems().addAll("Task 1", "Task 2", "Task 3"); //need to input backend list of tasks the user has 
-        taskDropdownNav.setValue("Tasks");
-        taskDropdownNav.setOnAction(event -> handleTaskDropdownSelection());  
+        // //Task Dropdown Navigation 
+        // //input backend list of tasks the user has 
+        // taskDropdownNav.getItems().addAll("Task 1", "Task 2", "Task 3"); //need to input backend list of tasks the user has 
+        // taskDropdownNav.setValue("Tasks");
+        // taskDropdownNav.setOnAction(event -> handleTaskDropdownSelection());  
     }
         
     
