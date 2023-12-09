@@ -21,7 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import model.*;
-public class LoginController {
+public class LoginController implements Initializable{
 
 
     @FXML
@@ -76,10 +76,17 @@ public class LoginController {
         App.setRoot("Signup");
     }
 
+    
+    /* 
     @FXML
     private void ConfirmProjectButtonClicked() {
             SceneManager.getInstance().showLogin();
             //this needs to be changed later
+    }
+    */
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+
     }
 
     /* 
