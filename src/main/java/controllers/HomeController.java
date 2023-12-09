@@ -35,6 +35,7 @@ public class HomeController {
         //     }
 
         //Project Dropdown Navigation 
+        handleProjectDropdownSelection();
         //input backend list of projects the user has 
         projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
         projectDropdownNav.setValue("Projects");
