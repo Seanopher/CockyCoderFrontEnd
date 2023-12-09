@@ -147,9 +147,38 @@
     -fx-border-insets: 10px;
 }
 
+.hyperlink {
+    -fx-text-fill: #c687ae;
+}
 
 /* Project Display */
 
 .main-project-content {
     -fx-padding:100 0 0 100;
+}
+
+.gridpane {
+    -fx-padding: 10 50 10 50;
+}
+
+.swimLane {
+    -fx-background-color:gray;
+    -fx-padding: 10 0 10 0;
+}
+
+.swimLaneTitleToDo {
+    -fx-background-color:#daa3ff;
+    -fx-padding: 0 50 0 50;
+}
+.swimLaneTitleDoing {
+    -fx-background-color:#fdd143;
+    -fx-padding: 0 50 0 50;
+}
+.swimLaneTitleDone {
+    -fx-background-color:#54d691;
+    -fx-padding: 0 50 0 50;
+}
+.swimLaneTitlePlus {
+    -fx-background-color:gray;
+    -fx-padding: 0 50 0 50;
 }

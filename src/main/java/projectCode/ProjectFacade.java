@@ -20,6 +20,7 @@ public class ProjectFacade {
     private Comment comment;
     private TaskList taskList;
     private Project project;
+    private UUID fake;
 
     /**
      * log-in function
@@ -70,7 +71,15 @@ public class ProjectFacade {
         else
             return null;
     }
-
+    
+    public void project(){
+        
+        ArrayList<UUID> random = null;
+        
+        Project project = new Project("Test", fake.randomUUID(), random);
+        
+        this.project = project;
+    }
     /**
      * changes the user's type (admin or user)
      * @param user the user from User class

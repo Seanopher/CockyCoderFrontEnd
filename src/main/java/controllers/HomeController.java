@@ -1,6 +1,8 @@
 package controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
@@ -33,24 +35,25 @@ public class HomeController {
         //     }
 
         //Project Dropdown Navigation 
+        handleProjectDropdownSelection();
         //input backend list of projects the user has 
-        projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
-        projectDropdownNav.setValue("Projects");
-        projectDropdownNav.setOnAction(event -> handleProjectDropdownSelection()); 
+        // projectDropdownNav.getItems().addAll("Project 1", "Project 2", "Project 3"); 
+        // projectDropdownNav.setValue("Projects");
+        // projectDropdownNav.setOnAction(event -> handleProjectDropdownSelection()); 
         
-        //Task Dropdown Navigation 
-        //input backend list of tasks the user has 
-        taskDropdownNav.getItems().addAll("Task 1", "Task 2", "Task 3"); //need to input backend list of tasks the user has 
-        taskDropdownNav.setValue("Tasks");
-        taskDropdownNav.setOnAction(event -> handleTaskDropdownSelection());  
+        // //Task Dropdown Navigation 
+        // //input backend list of tasks the user has 
+        // taskDropdownNav.getItems().addAll("Task 1", "Task 2", "Task 3"); //need to input backend list of tasks the user has 
+        // taskDropdownNav.setValue("Tasks");
+        // taskDropdownNav.setOnAction(event -> handleTaskDropdownSelection());  
     }
         
     
     private void handleProjectDropdownSelection() {
         String selectedOption = projectDropdownNav.getValue();
-        Project project = projectFacade.project(selectedProject);
+        Project project = projectFacade.project(selectedOption);
 
-        ArrayList<String> columns = projectFacade.displayColumns(project);
+        ArrayList<String> columns = projectFacade.displayColumns(project, null);
         taskDropdownNav.getItems().clear();
         taskDropdownNav.getItems().addAll(columns);
     }

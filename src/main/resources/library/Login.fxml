@@ -31,6 +31,7 @@
 
             <Hyperlink text = "Login" onAction="#logInButtonClicked"/>
             <Label fx:id="lbl_error" styleClass="labelToLeft" />
+            <Hyperlink styleClass="hyperlink" text="Don't have an Account? Sign Up" onAction="#signUpButtonClicked"/>
             <Hyperlink text="Sign Up" onAction="#signUpButtonClicked"/>
          </children>
       </VBox>
