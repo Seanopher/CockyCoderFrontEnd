@@ -55,17 +55,16 @@ public class LoginController implements Initializable{
 
     @FXML
     private void logInButtonClicked() throws IOException{
-        //String username = usernameTextField.getText();
-        //String password = passwordTextField.getText();
+        String username = usernameTextField.getText();
+        String password = passwordTextField.getText();
 
 
         //Need to input logic from backend here
-        /* 
-        if(username.isEmpty() || password.isEmpty()){
+        if(username.isEmpty() || password.isEmpty() || username.contains(" ") || password.contains(" ")){
             System.out.println("invalid");
             return;
         }          
-        */  
+        
         App.setRoot("Home");
         
         

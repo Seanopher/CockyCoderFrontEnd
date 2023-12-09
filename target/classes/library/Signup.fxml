@@ -18,22 +18,22 @@
             <Label text="Sign Up" styleClass="loginSignUpTitle"/>
 
             <Label text="First Name:" styleClass="labelToLeft"/>
-            <TextField styleClass = "loginSignUpTextField"/>
+            <TextField fx:id = "txt_first_name" styleClass = "loginSignUpTextField"/>
 
             <Label text="Last Name:" styleClass="labelToLeft"/>
-            <TextField styleClass = "loginSignUpTextField"/>
+            <TextField fx:id = "txt_last_name" styleClass = "loginSignUpTextField"/>
 
             <Label text="Username:" styleClass="labelToLeft"/>
-            <TextField styleClass = "loginSignUpTextField"/>
+            <TextField fx:id = "txt_username" styleClass = "loginSignUpTextField"/>
 
             <Label text="Password: " styleClass="labelToLeft"/>
-            <PasswordField styleClass="loginSignUpTextField"/>
+            <PasswordField fx:id = "txt_password" styleClass="loginSignUpTextField"/>
 
             <Label text="Verify Password: " styleClass="labelToLeft"/>
-            <PasswordField styleClass="loginSignUpTextField"/>
+            <PasswordField fx:id = "txt_v_password" styleClass="loginSignUpTextField"/>
 
-            <Button text="Sign Up" onAction="#signUpButtonClicked" styleClass="signInSignUpButton"/>
-            <Hyperlink text="Already have an Account? Sign In" onAction="#logInButtonClicked"/>
+            <Button text="Sign Up" onMouseClicked="#signUpButtonClicked" styleClass="signInSignUpButton"/>
+            <Hyperlink text="Back" onAction="#backButtonClicked"/>
             <Label fx:id="lbl_error" text="" styleClass = "labelToLeft"/>
          </children>
       </VBox>
