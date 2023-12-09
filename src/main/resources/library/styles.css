@@ -147,6 +147,9 @@
     -fx-border-insets: 10px;
 }
 
+.hyperlink {
+    -fx-text-fill: #c687ae;
+}
 
 /* Project Display */
 

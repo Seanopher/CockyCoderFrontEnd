@@ -37,7 +37,6 @@
             </VBox>
             <VBox styleClass="main-project-content">
                 <Label text="Today's Tasks" styleClass="main-homescreen-headers"/>
-                
             </VBox>
         </HBox>
     </VBox>
