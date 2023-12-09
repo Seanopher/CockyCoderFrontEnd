@@ -189,7 +189,7 @@ public class DataLoader extends DataConstants {
                 JSONObject commentDetails = (JSONObject) commentObj;
                 String comment = (String) commentDetails.get("comment");
                 String userIDString = (String) commentDetails.get("userID");
-                ;
+                
                 UUID userUUID = UUID.fromString(userIDString);
                 User user = UserList.getInstance().getUser(userUUID);
                 String commentDateString = (String) commentDetails.get("date");

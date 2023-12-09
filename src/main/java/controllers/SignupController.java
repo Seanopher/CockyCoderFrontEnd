@@ -69,9 +69,10 @@ public class SignupController {
         //User user = project.getCurrentUser();
         */
         App.setRoot("Home");
-
-        
     }
+
+
+
     @FXML
     private void backButtonClicked() throws IOException {
         App.setRoot("Login");

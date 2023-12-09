@@ -8,9 +8,9 @@
             "14ebf76a-25f6-45a2-bf7e-4c1f5e906df3"
         ],
         "columns": [
-            {"title": "column1", "taskTitles": ["title1", "title2", "title3"]},
-            {"title": "column2", "taskTitles": ["title4", "title5", "title6"]},
-            {"title": "column3", "taskTitles": ["title7", "title8", "title9"]}
+            {"title": "To Do", "taskTitles": ["Columns class createColumn method", "Datawriter savetask method"]},
+            {"title": "Doing", "taskTitles": ["Comment class createComment method"]},
+            {"title": "Done", "taskTitles": ["Structure for DataWriter", "Add simple driver", "Add code for UI (driver)"]}
         ]
     }]
 }
