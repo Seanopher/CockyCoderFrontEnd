@@ -24,8 +24,8 @@ public class HomeController {
     public void initialize() {
         projectFacade = new ProjectFacade();
         //Image Initialization
-        Image image = new Image(getClass().getResource("/cocky_fx/images/user-icon.png").toExternalForm());
-        imageView.setImage(image);
+        //Image image = new Image(getClass().getResource("/cocky_fx/images/user-icon.png").toExternalForm());
+        //imageView.setImage(image);
 
         // imageView.setOnMouseClicked(new EventHandler<MouseEvent>()) {
         //     @Override

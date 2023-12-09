@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import java.net.URL?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -51,4 +51,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding> -->
     </children>
+    <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
 </StackPane>

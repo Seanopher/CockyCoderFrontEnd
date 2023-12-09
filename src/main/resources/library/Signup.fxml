@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
@@ -22,9 +23,6 @@
             <Label text="Last Name:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
-            <Label text="Email:" styleClass="labelToLeft"/>
-            <TextField styleClass = "loginSignUpTextField"/>
-
             <Label text="Username:" styleClass="labelToLeft"/>
             <TextField styleClass = "loginSignUpTextField"/>
 
@@ -44,4 +42,7 @@
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
 </VBox>
